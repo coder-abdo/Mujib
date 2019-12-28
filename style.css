@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #123f71;
+}
+.custom-jumbotron {
+  background-color: transparent !important;
+}
+.robot {
+  margin-left: 200px;
+}
+.robot svg {
+  animation: updown 1s linear infinite alternate;
+  transform: scale(8);
+  fill: #fff;
+}
+@keyframes updown {
+  0% {
+    transform: scale(8) translateY(-6px);
+  }
+  100% {
+    transform: scale(8) translateY(0);
+  }
+}
+.desktop {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-height: 120px;
+  height: 100%;
+  width: 100%;
+}
+.desktop svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  opacity: 0;
+  transform: scale(0);
+}
+.landscape-mob,
+.laptop-tablet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 120px;
+  height: 100%;
+}
+
+.landscape-mob svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  opacity: 0;
+  transform: scale(0);
+}
+.laptop-tablet svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  opacity: 0;
+  transform: scale(0);
+}
+.laptop-tablet .laptop {
+  width: 8rem;
+  height: 8rem;
+  margin-left: 50px;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@media (max-width: 768px) {
+  .robot {
+    display: none !important;
+  }
+  .connect {
+    flex-direction: column !important;
+  }
+  .social-media {
+    display: flex;
+    align-items: center;
+  }
+  .fb-in,
+  .insta {
+    justify-content: space-between !important;
+    margin-bottom: 0 !important;
+  }
+  .fb-in svg:first-child {
+    margin-right: 20px !important;
+  }
+  .tw-wat svg:first-child {
+    margin-right: 20px !important;
+  }
+  .insta svg {
+    margin: 0 20px !important;
+  }
+}
+/* *********************************************** */
+/* social media icons */
+.fb-in {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.fb-in svg {
+  fill: #fff;
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+.fb-in svg:first-child {
+  margin-right: 30px;
+}
+.fb-in svg:hover {
+  cursor: pointer;
+  transform: scale(1.6);
+}
+.insta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.insta svg {
+  fill: #fff;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.insta svg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.tw-wat {
+  display: flex;
+  align-items: center;
+}
+.tw-wat svg:first-child {
+  margin-right: 30px;
+}
+.tw-wat svg {
+  fill: #fff;
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+.tw-wat svg:hover {
+  cursor: pointer;
+  transform: scale(1.6);
+}
+/* ********************************************* */
